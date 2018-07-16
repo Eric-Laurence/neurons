@@ -9,7 +9,7 @@ input_list = [
     (-5, 3)
 ]
 
-coefficient_list = [
+weights_list = [
     (2, 4),
     (9, 3),
     (5, 2),
@@ -18,7 +18,7 @@ coefficient_list = [
 
 neuron_list = []
 
-for a, b in coefficient_list:
+for a, b in weights_list:
     neuron_list.append(Neuron(a, b))
     
     

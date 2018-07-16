@@ -1,5 +1,8 @@
+a = 2
+b = 4
+
 def weightedSum (x, y):
-    return 1*x + 1*y
+    return a*x + b*y
 
 def activate (x):
     if x > 0.5:

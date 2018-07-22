@@ -10,16 +10,16 @@ input_list = [
 ]
 
 weights_list = [
-    (2, 4),
-    (9, 3),
-    (5, 2),
-    (8, 5)
+    (0, 2, 4),
+    (0, 9, 3),
+    (0, 5, 2),
+    (0, 8, 5)
 ]
 
 neuron_list = []
 
-for a, b in weights_list:
-    neuron_list.append(Neuron(0, a, b))
+for weights in weights_list:
+    neuron_list.append(Neuron(*weights))
     
     
 for neuron_i, neuron in enumerate(neuron_list):

@@ -4,8 +4,16 @@ class ArgumentError (Exception):
     pass
 
 class Neuron:
+    '''
+    A single neuron.
+    '''
 
     def __init__(self, bias, *weights):
+        '''
+        Be careful when passing in a list with
+        splat--the first argument must be the
+        bias, not a weight.
+        '''
         self.bias = bias
         self.weights = weights
 

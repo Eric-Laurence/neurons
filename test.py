@@ -19,7 +19,7 @@ weights_list = [
 neuron_list = []
 
 for a, b in weights_list:
-    neuron_list.append(Neuron(a, b))
+    neuron_list.append(Neuron(0, a, b))
     
     
 for neuron_i, neuron in enumerate(neuron_list):
@@ -32,7 +32,7 @@ for neuron_i, neuron in enumerate(neuron_list):
 
 print()
 print("Test three inputs:")
-neuron1 = Neuron(3, 2, 1)
+neuron1 = Neuron(0, 3, 2, 1)
 print("    weighted sum: " + str(neuron1.weightedSum(1, 2, 3)))
 print("    output: " + str(neuron1.output(1, 2, 3)))
 

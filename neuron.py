@@ -5,14 +5,17 @@ class ArgumentError (Exception):
 
 class Neuron:
 
-    def __init__(self, *weights):
+    def __init__(self, bias, *weights):
+        self.bias = bias
         self.weights = weights
 
     def weightedSum (self, *inputs):
         if len(inputs) != len(self.weights):
-            raise ArgumentError
+            raise ArgumentError(
+                "Had %s inputs, %s weights"
+                % (len(inputs), len(self.weights)))
 
-        sum = 0
+        sum = self.bias
         for i in range(len(inputs)):
             sum += inputs[i] * self.weights[i]
 

@@ -71,7 +71,7 @@ class ConnectNeuron:
 
         sum = self.bias
         for i in range(num_inputs)):
-            sum += self.inputs[i] * self.weights[i]
+            sum += self.inputs[i].output() * self.weights[i]
 
         return sum
 
